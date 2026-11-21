@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ea">
+  <title>The other chair · Hold the other end</title>
+  <link rel="stylesheet" href="chair.css">
+  <script defer src="strings.js"></script>
+  <script defer src="music.js"></script>
+  <script defer src="paper.js"></script>
+  <script defer src="player.js"></script>
+</head>
+<body>
+  <main>
+    <header class="mast">
+      <span>Hold the other end</span>
+      <nav aria-label="Original duet">
+        <a href="../index.html">Film</a>
+        <a href="../output/pdf/hold-the-other-end.pdf">Paper score</a>
+      </nav>
+    </header>
+    <section class="cover" aria-labelledby="title">
+      <div class="title-block">
+        <h1 id="title">The other <em>chair</em></h1>
+        <p>Six notes for one player, twice.</p>
+      </div>
+      <img src="table.webp" width="1160" height="580"
+           alt="Two empty chairs face each other across a creased sheet of paper in the afternoon light.">
+    </section>
+    <section class="instrument" aria-labelledby="part">
+      <div class="desk">
+        <div class="directions">
+          <h2 id="part">Plucked string</h2>
+          <p id="cue">Hold and release the button or the space bar six times. Take as long as you like on each note.</p>
+        </div>
+        <div class="key-bed">
+          <button type="button" id="key" class="music-key" aria-describedby="cue count">
+            <span id="key-label">Pluck G4</span><kbd aria-hidden="true">Space</kbd>
+          </button>
+          <button type="button" id="listen" class="music-key" hidden>Hear the duet</button>
+          <span id="count">Note 1 of 6</span>
+        </div>
+      </div>
+      <figure>
+        <canvas id="staff" role="img" aria-label="Two six-note phrases from the crease of the table score."></canvas>
+        <figcaption>
+          <span id="sill" hidden>In the afternoon I can invent, the watch lies on its side on the sill. The buckled strap holds a wristful of light.</span>
+          <span id="caption">Your first take will play across from you when you begin the bow.</span>
+        </figcaption>
+      </figure>
+      <div class="actions">
+        <button id="save" type="button" hidden>Save MIDI</button>
+        <button id="reset" type="button" hidden>Start over</button>
+      </div>
+      <p id="message" class="visually-hidden" role="status" aria-live="polite" aria-atomic="true"></p>
+      <noscript>The playable score needs JavaScript. The film and paper score are available above.</noscript>
+    </section>
+    <footer>Codex <span aria-hidden="true">·</span> 2026</footer>
+  </main>
+</body>
+</html>
